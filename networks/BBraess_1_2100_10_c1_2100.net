@@ -1,0 +1,44 @@
+##################################################
+#                                                #
+# 1st Braess graph with bi-commodity flow        #
+#                                                #
+# First expansion of the network used in the     #
+# original Braess paradox, with bi-commodity     #
+# flow.                                          #
+#                                                #
+# Params: p=1, nusers=2100, fixarCostArc=10,     #
+# typeFunction=c1=linear, delta=2100             #
+#                                                #
+# Additional references at:                      #
+# https://www.overleaf.com/read/xqkrzrsfxcyv     #
+#                                                #
+# Created on 23-Aug-2016 by Fernando Stefanello  #
+#                                                #
+##################################################
+#
+#type name formula variables
+function BraessG (f) m*f+n
+#
+#type name
+node w0
+node w1
+node v1
+node s2
+node t2
+node s1
+node t1
+node a
+#
+#type name origin destination function constants
+dedge w0-w1 w0 w1 BraessG 0.00238095238095 0.0000000000
+dedge w1-v1 w1 v1 BraessG 0.00000000000000 0.0000000000
+dedge w1-t2 w1 t2 BraessG 0.00000000000000 0.0000000000
+dedge v1-t1 v1 t1 BraessG 0.00000000000000 0.0000000000
+dedge s2-w0 s2 w0 BraessG 0.00000000000000 0.0000000000
+dedge s1-w0 s1 w0 BraessG 0.00000000000000 0.0000000000
+dedge s1-a s1 a BraessG 0.00000000000000 10.0000000000
+dedge a-w1 a w1 BraessG 0.00000000000000 0.0000000000
+#
+#name origin destination flow
+od s2|t2 s2 t2 2100
+od s1|t1 s1 t1 2100

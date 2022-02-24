@@ -1,0 +1,12 @@
+#the routes in this file were reordered to be used with the TRC experiments
+#OD route
+s2|t2 s2-w0,w0-w1,w1-w2,w2-w3,w3-t2
+s2|t2 s2-v1,v1-v2,v2-w2,w2-w3,w3-t2
+s2|t2 s2-w0,w0-w1,w1-v1,v1-v2,v2-w2,w2-w3,w3-t2
+s1|t1 s1-w0,w0-w1,w1-v1,v1-v2,v2-v3,v3-t1
+s1|t1 s1-a,a-w1,w1-v1,v1-v2,v2-v3,v3-t1
+s1|t1 s1-w0,w0-w1,w1-w2,w2-w3,w3-v3,v3-t1
+s1|t1 s1-w0,w0-w1,w1-v1,v1-v2,v2-w2,w2-w3,w3-v3,v3-t1
+s1|t1 s1-a,a-w2,w2-w3,w3-v3,v3-t1
+s1|t1 s1-a,a-w1,w1-w2,w2-w3,w3-v3,v3-t1
+s1|t1 s1-a,a-w1,w1-v1,v1-v2,v2-w2,w2-w3,w3-v3,v3-t1

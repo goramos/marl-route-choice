@@ -1,0 +1,53 @@
+##################################################
+#                                                #
+# 4th Braess graph with singlecommodity flow     #
+#                                                #
+# Fourth expansion of the network used in the    #
+# original Braess paradox.                       #
+#                                                #
+# Params: p=4, nusers=4200, fixarCostArc=10,     #
+# typeFunction=c1=linear                         #
+#                                                #
+# Additional references at:                      #
+# https://www.overleaf.com/read/xqkrzrsfxcyv     #
+#                                                #
+# Created on 23-Aug-2016 by Fernando Stefanello  #
+#                                                #
+##################################################
+#
+#type name formula variables
+function BraessG (f) m*f+n
+#
+#type name
+node 1
+node 2
+node 3
+node 4
+node 5
+node 6
+node 7
+node 8
+node 9
+node 10
+#
+#type name origin destination function constants
+dedge 1-2 1 2 BraessG 0.03809523809524 0.0000000000
+dedge 1-3 1 3 BraessG 0.02857142857143 0.0000000000
+dedge 1-4 1 4 BraessG 0.01904761904762 0.0000000000
+dedge 1-5 1 5 BraessG 0.00952380952381 0.0000000000
+dedge 1-9 1 9 BraessG 0.00000000000000 10.0000000000
+dedge 2-6 2 6 BraessG 0.00000000000000 0.0000000000
+dedge 2-10 2 10 BraessG 0.00000000000000 10.0000000000
+dedge 3-6 3 6 BraessG 0.00000000000000 10.0000000000
+dedge 3-7 3 7 BraessG 0.00000000000000 0.0000000000
+dedge 4-7 4 7 BraessG 0.00000000000000 10.0000000000
+dedge 4-8 4 8 BraessG 0.00000000000000 0.0000000000
+dedge 5-8 5 8 BraessG 0.00000000000000 10.0000000000
+dedge 5-9 5 9 BraessG 0.00000000000000 0.0000000000
+dedge 6-10 6 10 BraessG 0.00952380952381 0.0000000000
+dedge 7-10 7 10 BraessG 0.01904761904762 0.0000000000
+dedge 8-10 8 10 BraessG 0.02857142857143 0.0000000000
+dedge 9-10 9 10 BraessG 0.03809523809524 0.0000000000
+#
+#name origin destination flow
+od 1|10 1 10 4200

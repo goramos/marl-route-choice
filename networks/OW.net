@@ -1,0 +1,57 @@
+##################################################
+#                                                #
+# OW network                                     #
+#                                                #
+# Example 10.1 from "Ortúzar & Willumsen (2011). #
+# Modelling transport (4th ed.). Chichester:     #
+# John Wiley & Sons".                            #
+#                                                #
+# Created on 17-May-2016 by Gabriel de O. Ramos  #
+#                                                #
+##################################################
+#function name (args) formula
+function OW (f) t+0.02*f
+#node name
+node A
+node B
+node C
+node D
+node E
+node F
+node G
+node H
+node I
+node J
+node K
+node L
+node M
+#edge name origin destination function constants
+edge A-B A B OW 7
+edge A-C A C OW 5
+edge A-D A D OW 15
+edge B-D B D OW 11
+edge B-E B E OW 11
+edge C-D C D OW 7
+edge C-F C F OW 11
+edge C-G C G OW 9
+edge D-E D E OW 7
+edge D-G D G OW 7
+edge D-H D H OW 9
+edge E-H E H OW 7
+edge F-G F G OW 9
+edge F-I F I OW 13
+edge G-H G H OW 9
+edge G-J G J OW 3
+edge G-K G K OW 13
+edge H-K H K OW 3
+edge I-J I J OW 9
+edge I-L I L OW 2
+edge J-K J K OW 9
+edge J-L J L OW 12
+edge J-M J M OW 12
+edge K-M K M OW 2
+#od name origin destination flow
+od A|L A L 600
+od A|M A M 400
+od B|L B L 300
+od B|M B M 400

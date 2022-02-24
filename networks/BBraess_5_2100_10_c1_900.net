@@ -1,0 +1,68 @@
+##################################################
+#                                                #
+# 5th Braess graph with bi-commodity flow        #
+#                                                #
+# Fifth expansion of the network used in the     #
+# original Braess paradox, with bi-commodity     #
+# flow.                                          #
+#                                                #
+# Params: p=5, nusers=2100, fixarCostArc=10,     #
+# typeFunction=c1=linear, delta=900              #
+#                                                #
+# Additional references at:                      #
+# https://www.overleaf.com/read/xqkrzrsfxcyv     #
+#                                                #
+# Created on 23-Aug-2016 by Fernando Stefanello  #
+#                                                #
+##################################################
+#
+#type name formula variables
+function BraessG (f) m*f+n
+#
+#type name
+node w0
+node w1
+node w2
+node w3
+node w4
+node w5
+node v1
+node v2
+node v3
+node v4
+node v5
+node s2
+node t2
+node s1
+node t1
+node a
+#
+#type name origin destination function constants
+dedge w0-w1 w0 w1 BraessG 0.00333333333333 0.0000000000
+dedge w1-w2 w1 w2 BraessG 0.00000000000000 0.0000000000
+dedge w1-v1 w1 v1 BraessG 0.00000000000000 0.0000000000
+dedge w2-w3 w2 w3 BraessG 0.00666666666667 0.0000000000
+dedge w3-w4 w3 w4 BraessG 0.00000000000000 0.0000000000
+dedge w3-v3 w3 v3 BraessG 0.00000000000000 0.0000000000
+dedge w4-w5 w4 w5 BraessG 0.01666666666667 0.0000000000
+dedge w5-v5 w5 v5 BraessG 0.00000000000000 0.0000000000
+dedge w5-t2 w5 t2 BraessG 0.00000000000000 0.0000000000
+dedge v1-v2 v1 v2 BraessG 0.00333333333333 0.0000000000
+dedge v2-w2 v2 w2 BraessG 0.00000000000000 0.0000000000
+dedge v2-v3 v2 v3 BraessG 0.00000000000000 0.0000000000
+dedge v3-v4 v3 v4 BraessG 0.01000000000000 0.0000000000
+dedge v4-w4 v4 w4 BraessG 0.00000000000000 0.0000000000
+dedge v4-v5 v4 v5 BraessG 0.00000000000000 0.0000000000
+dedge v5-t1 v5 t1 BraessG 0.00000000000000 0.0000000000
+dedge s2-w0 s2 w0 BraessG 0.00000000000000 0.0000000000
+dedge s2-v1 s2 v1 BraessG 0.00000000000000 0.0000000000
+dedge s2-v3 s2 v3 BraessG 0.00000000000000 0.0000000000
+dedge s1-w0 s1 w0 BraessG 0.00000000000000 0.0000000000
+dedge s1-a s1 a BraessG 0.00000000000000 10.0000000000
+dedge a-w1 a w1 BraessG 0.00000000000000 0.0000000000
+dedge a-w2 a w2 BraessG 0.00000000000000 0.0000000000
+dedge a-w4 a w4 BraessG 0.00000000000000 0.0000000000
+#
+#name origin destination flow
+od s2|t2 s2 t2 2100
+od s1|t1 s1 t1 2100

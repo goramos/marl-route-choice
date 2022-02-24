@@ -1,0 +1,10 @@
+*.project
+*.pydevproject
+*.pyc
+.idea
+.DS_Store
+experiments/results/*
+
+# exception to the rule
+!experiments/results/.gitkeep
+
